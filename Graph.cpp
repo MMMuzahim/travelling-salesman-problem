@@ -32,7 +32,16 @@ Graph::Graph(int n) {
 }
 
 // данные о графе
-int** Graph::Get_data() const { return data; }
+int** Graph::Get_data() const {
+    int** d = new int*[n];
+    for (int i = 0; i < n; ++i) {
+        d[i] = new int[n];
+        for (int j = 0; j < n; ++j) {
+            d[i][j] = data[i][j];
+        }
+    }
+    return d;
+}
 
 // количество вершин графа
 int Graph::Get_n() const { return n; }
