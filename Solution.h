@@ -13,8 +13,7 @@ using namespace std;
 
 class Solution {
 private:
-    int n;                                      // количество вершин
-    int** graph;                                // граф в виде двоичного массива n на n
+    Graph graph;                                // граф
 
 public:
     Solution(const Graph& g);
